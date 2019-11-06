@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    pedrule-virtual-scroll {
+        flex: 1;
+    }
+</style>
+<body style="margin:0;">
+    <div  style="width: 300px; height: 50vh; display: flex;">
+        <pedrule-virtual-scroll width="150" name-of-container="span">
+            <!-- <template> -->
+                <span>This is a test with an other </div>
+            <!-- </template> -->
+        </pedrule-virtual-scroll>
+    </div>
+
+
+<script>
+    let virtual = document.body.querySelector('pedrule-virtual-scroll');
+    let array = [];
+    for(let i = 0; i< 1000; i++) {
+        array.push(i);
+    }
+    virtual.items = array;
+</script>
+
+</body>
+</html>

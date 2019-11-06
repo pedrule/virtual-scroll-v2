@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Put your description here.">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #ededed;
+    }
+  </style>
+  <title>pedrule-virtual-scroll</title>
+</head>
+<body style="margin:0;">
+  <div  style="width: 300px; height: 50vh; display: flex;">
+      <pedrule-virtual-scroll width="150" name-of-container="span">
+          <!-- <template> -->
+              <span>This is a test with an other </div>
+          <!-- </template> -->
+      </pedrule-virtual-scroll>
+  </div>
+
+
+<script>
+  let virtual = document.body.querySelector('pedrule-virtual-scroll');
+  let array = [];
+  for(let i = 0; i< 1000; i++) {
+      array.push(i);
+  }
+  virtual.items = array;
+</script>
+
+  <script type="module" src="./src/pedrule-virtual-scroll.js"></script>
+</body>
+
+</html>
